@@ -1,6 +1,9 @@
-// src/app/components/sections/OngsSection.tsx
 import { type ONG } from '@/types/api';
 import '@/app/styles/ongs-section.css';
+import { MdGroups } from 'react-icons/md';
+import { Lusitana } from '@next/font/google';
+
+const lusitana = Lusitana({ subsets: ['latin'], weight: ['700'] });
 
 interface OngsSectionProps {
   data: ONG[];
@@ -9,7 +12,7 @@ interface OngsSectionProps {
 export const OngsSection = ({ data }: OngsSectionProps) => (
   <section className="ongs-section" id="ongs">
     <div className="container">
-      <h2 className="ongs-section__title">ONGs Parceiras</h2>
+      <h2 className={`ongs-section__title ${lusitana.className}`} style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8}}><MdGroups size={36}/> ONGs Parceiras</h2>
       <div className="ongs-section__list">
         {data.map((ong, idx) => (
           <div key={ong.id + '-' + idx} className="ongs-section__card">

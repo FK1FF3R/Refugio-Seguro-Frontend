@@ -1,4 +1,3 @@
-// src/services/api.ts
 import { type Abrigo, type ONG, type ApoioJuridico, type Recurso, type FAQ } from '@/types/api';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;

@@ -1,8 +1,11 @@
 'use client';
-// src/app/components/sections/AbrigosSection.tsx
 import { type Abrigo } from '@/types/api';
 import '@/app/styles/abrigos-section.css';
 import { useRef, useState } from 'react';
+import { MdHome, MdArrowBack, MdArrowForward } from 'react-icons/md';
+import { Lusitana } from '@next/font/google';
+
+const lusitana = Lusitana({ subsets: ['latin'], weight: ['700'] });
 
 function InfiniteCarouselRow({ abrigos }: { abrigos: Abrigo[] }) {
   const rowRef = useRef<HTMLDivElement>(null);
@@ -49,7 +52,7 @@ function InfiniteCarouselRow({ abrigos }: { abrigos: Abrigo[] }) {
 
   return (
     <div className="abrigos-carousel-row-wrapper">
-      <button className="abrigos-carousel-arrow left" onClick={() => scroll('left')} aria-label="Anterior">&#8592;</button>
+      <button className="abrigos-carousel-arrow left" onClick={() => scroll('left')} aria-label="Anterior"><MdArrowBack size={24} style={{display:'block',margin:'0 auto'}}/></button>
       <div className="abrigos-carousel-row" ref={rowRef}>
         {items.map((abrigo, idx) => (
           <div key={abrigo.id + '-' + idx} className="abrigos-section__card">
@@ -61,7 +64,7 @@ function InfiniteCarouselRow({ abrigos }: { abrigos: Abrigo[] }) {
           </div>
         ))}
       </div>
-      <button className="abrigos-carousel-arrow right" onClick={() => scroll('right')} aria-label="Próximo">&#8594;</button>
+      <button className="abrigos-carousel-arrow right" onClick={() => scroll('right')} aria-label="Próximo"><MdArrowForward size={24} style={{display:'block',margin:'0 auto'}}/></button>
     </div>
   );
 }
@@ -70,7 +73,7 @@ export const AbrigosSection = ({ data }: { data: Abrigo[] }) => {
   return (
     <section className="abrigos-section" id="abrigos">
       <div className="container">
-        <h2 className="abrigos-section__title">Abrigos Disponíveis</h2>
+        <h2 className={`abrigos-section__title ${lusitana.className}`} style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8}}><MdHome size={36}/> Abrigos Disponíveis</h2>
         <div className="abrigos-carousel">
           <InfiniteCarouselRow abrigos={data} />
         </div>

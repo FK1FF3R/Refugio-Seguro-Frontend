@@ -1,4 +1,3 @@
-// src/app/components/layout/Footer.tsx
 import '@/app/styles/footer.css';
 
 export const Footer = () => (

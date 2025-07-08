@@ -1,4 +1,3 @@
-// src/app/components/layout/Header.tsx
 import Link from 'next/link';
 import '@/app/styles/header.css';
 

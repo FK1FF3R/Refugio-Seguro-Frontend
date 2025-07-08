@@ -1,5 +1,3 @@
-// src/types/api.ts
-
 export interface Abrigo {
   id: string;
   nome: string;

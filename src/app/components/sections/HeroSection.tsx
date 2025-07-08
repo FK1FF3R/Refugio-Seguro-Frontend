@@ -1,4 +1,3 @@
-// src/components/HeroSection.tsx
 import '@/app/styles/hero-section.css';
 
 export function HeroSection() {

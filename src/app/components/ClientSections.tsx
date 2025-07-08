@@ -5,8 +5,8 @@ import { ApoioJuridicoSection } from "./sections/ApoioJuridicoSection";
 import { RecursosSection } from "./sections/RecursosSection";
 import { FaqSection } from "./sections/FaqSection";
 import { useRef } from 'react';
-import { useFadeInOnScroll } from '@/app/hooks/useFadeInOnScroll';
 import { type Abrigo, type ONG, type ApoioJuridico, type Recurso, type FAQ } from '@/types/api';
+import { motion } from 'framer-motion';
 
 export default function ClientSections({ abrigos, ongs, apoioJuridico, recursos, faqs }: {
   abrigos: Abrigo[];
@@ -15,22 +15,48 @@ export default function ClientSections({ abrigos, ongs, apoioJuridico, recursos,
   recursos: Recurso[];
   faqs: FAQ[];
 }) {
-  const sectionRefs = [
-    useRef<HTMLDivElement>(null),
-    useRef<HTMLDivElement>(null),
-    useRef<HTMLDivElement>(null),
-    useRef<HTMLDivElement>(null),
-    useRef<HTMLDivElement>(null)
-  ];
-  useFadeInOnScroll(sectionRefs);
-
   return (
     <main className="space-y-16">
-      <div className="fade-in-on-scroll" ref={sectionRefs[0]}><AbrigosSection data={abrigos} /></div>
-      <div className="fade-in-on-scroll" ref={sectionRefs[1]}><OngsSection data={ongs} /></div>
-      <div className="fade-in-on-scroll" ref={sectionRefs[2]}><ApoioJuridicoSection data={apoioJuridico} /></div>
-      <div className="fade-in-on-scroll" ref={sectionRefs[3]}><RecursosSection data={recursos} /></div>
-      <div className="fade-in-on-scroll" ref={sectionRefs[4]}><FaqSection data={faqs} /></div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+      >
+        <AbrigosSection data={abrigos} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+      >
+        <OngsSection data={ongs} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+      >
+        <ApoioJuridicoSection data={apoioJuridico} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+      >
+        <RecursosSection data={recursos} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+      >
+        <FaqSection data={faqs} />
+      </motion.div>
     </main>
   );
 } 

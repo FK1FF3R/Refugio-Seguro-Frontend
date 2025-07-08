@@ -7,14 +7,16 @@ O Refúgio Seguro é uma plataforma que conecta pessoas em situação de vulnera
 - **Next.js**: 13+
 - **TypeScript**: 4.9+
 - **CSS puro**
+- **Framer Motion**: animações em React
+- **React Icons**: ícones modernos
 - **API Refúgio Seguro**: [https://github.com/FK1FF3R/refugio-seguro](https://github.com/FK1FF3R/refugio-seguro)
 
 ## Imagens do Projeto
 
-![Home](./public/preview-home.png)
-![Abrigos](./public/preview-abrigos.png)
-
-> Substitua os arquivos acima por prints reais do projeto rodando.
+![Home 1](./public/home1.png)
+![Home 2](./public/home2.png)
+![Home 3](./public/home3.png)
+![Home 4](./public/home4.png)
 
 ## Passo a Passo para Execução Local
 
@@ -28,7 +30,7 @@ O Refúgio Seguro é uma plataforma que conecta pessoas em situação de vulnera
    ```
 2. **Clone este repositório (frontend)**
    ```bash
-   git clone <URL deste repositório>
+   git clone https://github.com/FK1FF3R/Refugio-Seguro-Frontend.git
    cd refugio-seguro-frontend
    npm install
    ```
@@ -42,9 +44,6 @@ O Refúgio Seguro é uma plataforma que conecta pessoas em situação de vulnera
    npm run dev
    # O frontend estará disponível em http://localhost:3000
    ```
-
-## Link para a API utilizada
-- [https://github.com/FK1FF3R/refugio-seguro](https://github.com/FK1FF3R/refugio-seguro)
 
 ## Organização de Pastas
 
@@ -66,47 +65,15 @@ public/
   # Imagens, favicon, SVGs, logo.png
 ```
 
+## Padrões e Boas Práticas
+- Componentização, tipagem forte, imports absolutos, CSS modularizado, hooks customizados, Clean Code.
+- Animações feitas com Framer Motion.
+- Ícones com React Icons.
+
 ## Sobre (About)
 - **Site:** (adicione aqui o link caso esteja hospedado)
 - **API:** [https://github.com/FK1FF3R/refugio-seguro](https://github.com/FK1FF3R/refugio-seguro)
 - **Apresentação LinkedIn:** (adicione aqui o link da postagem de apresentação)
 - **Tópicos:** nextjs, typescript, acessibilidade
-
-## 🧑‍💻 Padrões e Boas Práticas
-- **Componentização:** Cada section e parte do layout é um componente isolado.
-- **Tipagem Forte:** Todas as props e funções são tipadas, sem uso de `any`.
-- **Imports Absolutos:** Usando paths do `tsconfig.json` para clareza e manutenção.
-- **CSS Modularizado:** Cada componente importa apenas seu CSS correspondente.
-- **Hooks Customizados:** Lógica de animação e efeitos em hooks reutilizáveis.
-- **Clean Code:** Nomes claros, funções pequenas, sem duplicidade ou código morto.
-
-## 🎨 Estilo e Responsividade
-- Paleta de cores definida em variáveis CSS globais.
-- Layout responsivo e moderno.
-- Animações suaves de entrada nas sections.
-
-## 🎨 Estilo e Responsividade
-- Paleta de cores definida em variáveis CSS globais.
-- Layout responsivo e moderno.
-- Animações suaves de entrada nas sections.
-
-## 🏁 Como Rodar o Projeto
-
-1. Instale as dependências:
-   ```bash
-   npm install
-   ```
-2. Crie um arquivo `.env.local` com a variável `NEXT_PUBLIC_API_URL` apontando para a API Refugio Seguro.
-3. Rode o servidor de desenvolvimento:
-   ```bash
-   npm run dev
-   ```
-4. Acesse em [http://localhost:3000](http://localhost:3000)
-
-## 🤝 Como Contribuir
-- Siga o padrão de organização de pastas e tipagem.
-- Crie componentes pequenos e reutilizáveis.
-- Sempre use imports absolutos.
-- Mantenha o código limpo e sem comentários desnecessários.
 
 
