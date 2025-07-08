@@ -5,6 +5,7 @@ export const Header = () => (
   <header className="header">
     <div className="header__container">
       <a href="/" className="header__brand">
+        <img src="/logo.png" alt="Logo Refúgio Seguro" />
         Refúgio Seguro
       </a>
       <nav className="header__nav">

@@ -12,6 +12,9 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="pt-BR" className="layout-html">
+      <head>
+        <link rel="icon" href="/favicon.ico" type="image/png" />
+      </head>
       <body className="layout-body">
         <Header />
         <main className="layout-main">
