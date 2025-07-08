@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Refúgio Seguro Frontend
 
-## Getting Started
+## Contextualização
+O Refúgio Seguro é uma plataforma que conecta pessoas em situação de vulnerabilidade a abrigos, ONGs, apoio jurídico e recursos confiáveis. O objetivo é facilitar o acesso a direitos básicos e informações seguras, promovendo acolhimento e proteção para mulheres, pessoas LGBTQIAPN+, refugiados, imigrantes, crianças, idosos e outros grupos marginalizados.
 
-First, run the development server:
+## Tecnologias Utilizadas
+- **Next.js**: 13+
+- **TypeScript**: 4.9+
+- **CSS puro**
+- **API Refúgio Seguro**: [https://github.com/FK1FF3R/refugio-seguro](https://github.com/FK1FF3R/refugio-seguro)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Imagens do Projeto
+
+![Home](./public/preview-home.png)
+![Abrigos](./public/preview-abrigos.png)
+
+> Substitua os arquivos acima por prints reais do projeto rodando.
+
+## Passo a Passo para Execução Local
+
+1. **Clone o repositório da API**
+   ```bash
+   git clone https://github.com/FK1FF3R/refugio-seguro.git
+   cd refugio-seguro
+   npm install
+   npm run dev
+   # A API estará disponível em http://localhost:3001
+   ```
+2. **Clone este repositório (frontend)**
+   ```bash
+   git clone <URL deste repositório>
+   cd refugio-seguro-frontend
+   npm install
+   ```
+3. **Configure o arquivo `.env.local`**
+   Crie um arquivo `.env.local` na raiz do frontend com o conteúdo:
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:3001
+   ```
+4. **Rode o frontend**
+   ```bash
+   npm run dev
+   # O frontend estará disponível em http://localhost:3000
+   ```
+
+## Link para a API utilizada
+- [https://github.com/FK1FF3R/refugio-seguro](https://github.com/FK1FF3R/refugio-seguro)
+
+## Organização de Pastas
+
+```
+src/
+  app/
+    components/
+      layout/         # Componentes de layout global (Header, Footer)
+      sections/       # Sections principais da página (Abrigos, ONGs, etc)
+      ClientSections.tsx # Componente client para animações e controle das sections
+    hooks/            # Hooks customizados (ex: useFadeInOnScroll)
+    styles/           # CSS modularizado por componente/section
+    globals.css       # Estilos globais e variáveis CSS
+    layout.tsx        # Layout principal do Next.js
+    page.tsx          # Página principal
+  services/           # Serviços de API
+  types/              # Tipos TypeScript compartilhados
+public/
+  # Imagens, favicon, SVGs, logo.png
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Sobre (About)
+- **Site:** (adicione aqui o link caso esteja hospedado)
+- **API:** [https://github.com/FK1FF3R/refugio-seguro](https://github.com/FK1FF3R/refugio-seguro)
+- **Apresentação LinkedIn:** (adicione aqui o link da postagem de apresentação)
+- **Tópicos:** nextjs, typescript, acessibilidade
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧑‍💻 Padrões e Boas Práticas
+- **Componentização:** Cada section e parte do layout é um componente isolado.
+- **Tipagem Forte:** Todas as props e funções são tipadas, sem uso de `any`.
+- **Imports Absolutos:** Usando paths do `tsconfig.json` para clareza e manutenção.
+- **CSS Modularizado:** Cada componente importa apenas seu CSS correspondente.
+- **Hooks Customizados:** Lógica de animação e efeitos em hooks reutilizáveis.
+- **Clean Code:** Nomes claros, funções pequenas, sem duplicidade ou código morto.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Estilo e Responsividade
+- Paleta de cores definida em variáveis CSS globais.
+- Layout responsivo e moderno.
+- Animações suaves de entrada nas sections.
 
-## Learn More
+## 🎨 Estilo e Responsividade
+- Paleta de cores definida em variáveis CSS globais.
+- Layout responsivo e moderno.
+- Animações suaves de entrada nas sections.
 
-To learn more about Next.js, take a look at the following resources:
+## 🏁 Como Rodar o Projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+2. Crie um arquivo `.env.local` com a variável `NEXT_PUBLIC_API_URL` apontando para a API Refugio Seguro.
+3. Rode o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+4. Acesse em [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Como Contribuir
+- Siga o padrão de organização de pastas e tipagem.
+- Crie componentes pequenos e reutilizáveis.
+- Sempre use imports absolutos.
+- Mantenha o código limpo e sem comentários desnecessários.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

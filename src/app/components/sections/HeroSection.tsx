@@ -1,5 +1,5 @@
 // src/components/HeroSection.tsx
-import '../style/hero-section.css';
+import '@/app/styles/hero-section.css';
 
 export function HeroSection() {
   return (

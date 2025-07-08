@@ -1,5 +1,5 @@
 // src/app/components/layout/Footer.tsx
-import '../style/footer.css';
+import '@/app/styles/footer.css';
 
 export const Footer = () => (
   <footer className="footer">

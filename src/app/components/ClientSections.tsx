@@ -4,24 +4,25 @@ import { OngsSection } from "./sections/OngsSection";
 import { ApoioJuridicoSection } from "./sections/ApoioJuridicoSection";
 import { RecursosSection } from "./sections/RecursosSection";
 import { FaqSection } from "./sections/FaqSection";
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
+import { useFadeInOnScroll } from '@/app/hooks/useFadeInOnScroll';
+import { type Abrigo, type ONG, type ApoioJuridico, type Recurso, type FAQ } from '@/types/api';
 
-export default function ClientSections({ abrigos, ongs, apoioJuridico, recursos, faqs }: any) {
-  const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
-
-  useEffect(() => {
-    const observer = new window.IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15 });
-    sectionRefs.forEach(ref => {
-      if (ref.current) observer.observe(ref.current);
-    });
-    return () => observer.disconnect();
-  }, []);
+export default function ClientSections({ abrigos, ongs, apoioJuridico, recursos, faqs }: {
+  abrigos: Abrigo[];
+  ongs: ONG[];
+  apoioJuridico: ApoioJuridico[];
+  recursos: Recurso[];
+  faqs: FAQ[];
+}) {
+  const sectionRefs = [
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null)
+  ];
+  useFadeInOnScroll(sectionRefs);
 
   return (
     <main className="space-y-16">

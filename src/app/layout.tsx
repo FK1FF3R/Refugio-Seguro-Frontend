@@ -1,8 +1,8 @@
 // src/app/layout.tsx
 import './globals.css';
-import './components/style/layout.css';
-import { Header } from './components/layout/Header';
-import { Footer } from './components/layout/Footer';
+import '@/app/styles/layout.css';
+import { Header } from '@/app/components/layout/Header';
+import { Footer } from '@/app/components/layout/Footer';
 import { ReactNode } from 'react';
 
 interface RootLayoutProps {

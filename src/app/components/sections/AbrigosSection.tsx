@@ -1,7 +1,7 @@
 'use client';
 // src/app/components/sections/AbrigosSection.tsx
 import { type Abrigo } from '@/types/api';
-import '../style/abrigos-section.css';
+import '@/app/styles/abrigos-section.css';
 import { useRef, useState } from 'react';
 
 function InfiniteCarouselRow({ abrigos }: { abrigos: Abrigo[] }) {
