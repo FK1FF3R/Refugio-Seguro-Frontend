@@ -2,7 +2,7 @@
 import { type FAQ } from '@/types/api';
 
 export const FaqSection = ({ data }: { data: FAQ[] }) => (
-  <section id="faq" className="w-full py-16 px-4 bg-gray-50">
+  <section className="w-full bg-warning text-white py-12 px-4 md:px-0">
     <div className="container mx-auto">
       <h2 className="text-4xl font-bold text-center mb-10">Perguntas Frequentes</h2>
       <div className="max-w-3xl mx-auto space-y-4">

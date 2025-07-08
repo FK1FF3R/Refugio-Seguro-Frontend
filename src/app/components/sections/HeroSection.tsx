@@ -1,11 +1,11 @@
-// src/app/components/sections/HeroSection.tsx
-export const HeroSection = () => (
-  <section id="hero" className="w-full h-screen flex items-center justify-center bg-blue-600 text-white text-center p-4">
-    <div>
-      <h1 className="text-5xl md:text-7xl font-extrabold">Encontre um Porto Seguro</h1>
-      <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
-        Conectamos pessoas em situação de vulnerabilidade a abrigos, ONGs e apoio jurídico em todo o país.
+// src/components/HeroSection.tsx
+export function HeroSection() {
+  return (
+    <section className="w-full bg-primary text-black flex flex-col items-center justify-center py-16 px-4 md:px-0">
+      <h2 className="text-4xl font-bold mb-4">Bem-vindo ao Refúgio Seguro</h2>
+      <p className="text-lg max-w-2xl">
+        Um espaço acolhedor para quem busca apoio, orientação e segurança emocional.
       </p>
-    </div>
-  </section>
-);
+    </section>
+  );
+}

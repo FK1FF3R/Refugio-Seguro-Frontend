@@ -1,28 +1,21 @@
 // src/app/layout.tsx
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { Header } from "./components/layout/Header";
-import { Footer } from "./components/layout/Footer";
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Refúgio Seguro - Encontre Apoio",
-  description: "Plataforma centralizada para encontrar abrigos, apoio jurídico e recursos para pessoas em vulnerabilidade.",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className="!scroll-smooth">
-      <body className={`${inter.className} bg-gray-50 text-gray-800`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+    <html lang="pt-BR" className="min-h-screen">
+      <body className="flex flex-col min-h-screen bg-white text-black font-sans">
+        <header className="bg-appleGreen p-4 shadow-md">
+          <h1 className="text-3xl font-bold">Refúgio Seguro</h1>
+        </header>
+
+        <main className="p-6 bg-white text-black flex-1">
+          {children}
+        </main>
+
+        <footer className="bg-rust text-white p-4 text-center">
+          <p>&copy; 2025 Refúgio Seguro. Todos os direitos reservados.</p>
+        </footer>
       </body>
     </html>
   );

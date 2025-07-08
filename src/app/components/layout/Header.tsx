@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 export const Header = () => (
-  <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md shadow-md">
+  <header className="w-full bg-appleGreen text-black shadow-md px-4 py-3 flex items-center justify-between">
     <div className="container mx-auto flex justify-between items-center p-4">
       <Link href="/" className="text-2xl font-bold text-blue-600">
         Refúgio Seguro
