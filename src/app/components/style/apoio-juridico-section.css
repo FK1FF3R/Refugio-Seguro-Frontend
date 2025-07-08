@@ -1,0 +1,68 @@
+:root {
+  --primary: #8EA604;
+  --secondary: #F5BB00;
+  --accent: #EC9F05;
+  --warning: #D76A03;
+  --danger: #BF3100;
+  --text-main: #111;
+  --bg-main: #fff;
+}
+.apoio-juridico-section {
+  width: 100%;
+  background: var(--bg-main);
+  color: var(--text-main);
+  padding: 48px 16px;
+}
+.apoio-juridico-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.apoio-juridico-section__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.apoio-juridico-section__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  .apoio-juridico-section__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.apoio-juridico-section__card {
+  background: #fff;
+  border: 2px solid var(--accent);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  padding: 32px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.apoio-juridico-section__card:hover {
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.16);
+  transform: scale(1.03);
+}
+.apoio-juridico-section__card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.apoio-juridico-section__card p {
+  margin: 6px 0;
+  color: #444;
+  font-size: 1rem;
+}
+.apoio-juridico-section__disponivel {
+  font-weight: bold;
+  margin-top: 8px;
+  color: var(--primary);
+}
+.apoio-juridico-section__indisponivel {
+  font-weight: bold;
+  margin-top: 8px;
+  color: var(--danger);
+} 

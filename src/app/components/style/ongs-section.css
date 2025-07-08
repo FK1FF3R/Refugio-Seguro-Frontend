@@ -1,0 +1,71 @@
+:root {
+  --primary: #8EA604;
+  --secondary: #F5BB00;
+  --accent: #EC9F05;
+  --warning: #D76A03;
+  --danger: #BF3100;
+  --text-main: #111;
+  --bg-main: #fff;
+}
+.ongs-section {
+  width: 100%;
+  background: var(--bg-main);
+  color: var(--text-main);
+  padding: 48px 16px;
+}
+.ongs-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.ongs-section__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.ongs-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.ongs-section__card {
+  background: #fff;
+  border: 2px solid var(--secondary);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  padding: 32px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.ongs-section__card:hover {
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.16);
+  transform: scale(1.03);
+}
+.ongs-section__card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+.ongs-section__card-missao {
+  color: #444;
+  font-style: italic;
+  margin: 8px 0 16px 0;
+}
+.ongs-section__areas-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.ongs-section__areas-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+.ongs-section__area {
+  background: rgba(245,187,0,0.15);
+  color: var(--secondary);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+} 

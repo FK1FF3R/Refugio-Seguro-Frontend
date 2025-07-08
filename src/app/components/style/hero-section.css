@@ -1,0 +1,26 @@
+:root {
+  --primary: #8EA604;
+  --text-main: #111;
+  --bg-main: #fff;
+}
+.hero-section {
+  width: 100%;
+  background: var(--primary);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 16px;
+}
+.hero-section__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.hero-section__desc {
+  font-size: 1.25rem;
+  max-width: 700px;
+  text-align: center;
+} 

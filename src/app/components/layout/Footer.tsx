@@ -1,8 +1,10 @@
 // src/app/components/layout/Footer.tsx
+import '../style/footer.css';
+
 export const Footer = () => (
-  <footer className="w-full bg-cocoaBrown text-white py-4 px-4 mt-auto flex flex-col md:flex-row items-center justify-between gap-2">
-    <div className="container mx-auto text-center">
-      {/* Rodapé limpo, sem texto */}
+  <footer className="footer">
+    <div>
+      &copy; 2025 Refúgio Seguro. Todos os direitos reservados.
     </div>
   </footer>
 );
