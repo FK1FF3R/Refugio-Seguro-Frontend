@@ -1,8 +1,4 @@
-import { AbrigosSection } from "./components/sections/AbrigosSection";
-import { OngsSection } from "./components/sections/OngsSection";
-import { ApoioJuridicoSection } from "./components/sections/ApoioJuridicoSection";
-import { RecursosSection } from "./components/sections/RecursosSection";
-import { FaqSection } from "./components/sections/FaqSection";
+import ClientSections from "./components/ClientSections";
 import { getAbrigos, getONGs, getApoioJuridico, getRecursos, getFAQs } from "@/services/api";
 
 export default async function Home() {
@@ -13,14 +9,5 @@ export default async function Home() {
     getRecursos(),
     getFAQs(),
   ]);
-
-  return (
-    <main className="space-y-16">
-      <AbrigosSection data={abrigos} />
-      <OngsSection data={ongs} />
-      <ApoioJuridicoSection data={apoioJuridico} />
-      <RecursosSection data={recursos} />
-      <FaqSection data={faqs} />
-    </main>
-  );
+  return <ClientSections abrigos={abrigos} ongs={ongs} apoioJuridico={apoioJuridico} recursos={recursos} faqs={faqs} />;
 }
