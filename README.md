@@ -14,6 +14,7 @@ O Refúgio Seguro é uma plataforma que conecta pessoas em situação de vulnera
 ## Imagens do Projeto
 
 ![Home 1](./public/home1.png)
+![Home 5](./public/home5.png)
 ![Home 2](./public/home2.png)
 ![Home 3](./public/home3.png)
 ![Home 4](./public/home4.png)
